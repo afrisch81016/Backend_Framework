@@ -35,6 +35,7 @@ def product_detail(request,pk):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+        
     elif request.method == 'DELETE':
         product.delete()
 
